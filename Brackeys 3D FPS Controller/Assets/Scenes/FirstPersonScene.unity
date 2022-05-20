@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 906774850}
   - component: {fileID: 906774849}
   - component: {fileID: 906774848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 15.15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1114588111}
@@ -438,8 +438,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 3.8
+  m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -453,11 +453,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114588109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.113345, y: -11.408876, z: -7.5019875}
+  m_LocalPosition: {x: 2.3558545, y: 2.5000002, z: 0.870425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1821795374}
   - {fileID: 963194228}
+  - {fileID: 1311836226}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -475,6 +476,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1114588110}
   speed: 12
+  gravity: -9.81
+  maxFallSpeed: -50
+  minFallSpeed: -2
+  groundCheck: {fileID: 1311836226}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!1 &1311836225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311836226}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311836226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311836225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1114588111}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821795373
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +526,7 @@ GameObject:
   - component: {fileID: 1821795376}
   - component: {fileID: 1821795375}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821795373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.708877, z: 0}
+  m_LocalPosition: {x: 0, y: 0.044, z: 0}
   m_LocalScale: {x: 1.2, y: 1.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1114588111}
