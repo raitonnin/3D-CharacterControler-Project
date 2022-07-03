@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public float maxFallSpeed = -50f;
 
-    public float minFallSpeed = -2f;
+    public float minFallSpeed = -0.1f;
 
     public float jumpHeight = 3f;
 
